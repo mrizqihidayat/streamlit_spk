@@ -27,10 +27,14 @@ else:
     age = st.sidebar.number_input("Usia (Tahun)", min_value=1, max_value=100, value=30)
     income = st.sidebar.number_input("Pendapatan Tahunan (k$)", min_value=1, max_value=200, value=50)
     score = st.sidebar.number_input("Skor Pengeluaran (1-100)", min_value=1, max_value=100, value=50)
+    propensity = st.sidebar.number_input("Propensity to Spend", min_value=0.0, max_value=100.0, value=1.0, step=0.01)
 
-    propensity = round(score / income, 2) if income > 0 else 0
+    gender_map = {
+        'Female': 0,
+        'Male': 1
+    }
 
-    gender_encoded = 0 if gender == "Female" else 1
+    gender_encoded = gender_map[gender]
     
     features = np.array([[gender_encoded, age, income, score, propensity]])
 
