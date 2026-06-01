@@ -42,14 +42,13 @@ else:
         prediction = model.predict(features)[0]
         
         cluster_info = {
-            0: "Pria Tua, Pendapatan Sedang, Pengeluaran Rendah (Hemat).",
-            1: "Wanita Dewasa, Pendapatan Tinggi, Pengeluaran Sangat Rendah (Sangat Hemat).",
-            2: "Anak Muda (Dominan Wanita), Pendapatan Rendah, Pengeluaran Tinggi (Impulsive Buyer).",
-            3: "Wanita Muda/Dewasa, Pendapatan Tinggi, Pengeluaran Tinggi (VIP Customer).",
-            4: "Wanita Muda, Pendapatan Sedang, Pengeluaran Sedang (Rata-rata).",
-            5: "Pria Muda, Pendapatan Tinggi, Pengeluaran Tinggi (Lifestyle Spender).",
-            6: "Wanita Tua, Pendapatan Sedang, Pengeluaran Rendah (Konservatif).",
-            7: "Pria Dewasa, Pendapatan Tinggi, Pengeluaran Sangat Rendah (Sangat Hemat)."
+            0: "Pria Senior dengan Pola Belanja Moderat",
+            1: "Pelanggan Muda dengan Pengeluaran Seimbang",
+            2: "Anak Muda Konsumtif Berpenghasilan Rendah",
+            3: "Pelanggan Premium/VIP",
+            4: "Berpenghasilan Tinggi dengan Minat Belanja Rendah",
+            5: "Pria Muda Konsumtif",
+            6: "Wanita Senior Konservatif"
         }
 
         st.subheader("Hasil Analisis")
@@ -68,4 +67,4 @@ else:
         st.write("Silakan masukkan data pelanggan di bilah samping dan klik tombol **Analisis Segmen**.")
 
 st.markdown("---")
-st.caption("Model didasarkan pada algoritma K-Means & Logistic Regression (Scikit-Learn)")
+st.caption("Model didasarkan pada algoritma K-Means (k=7) & Logistic Regression (Scikit-Learn)")
