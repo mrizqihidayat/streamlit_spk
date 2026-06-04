@@ -121,11 +121,11 @@ Pipeline([
 
 | Metrik | Nilai |
 |--------|-------|
-| **Accuracy** | Tercantum dalam output notebook |
-| **Precision** (weighted) | Tercantum dalam output notebook |
-| **Recall** (weighted) | Tercantum dalam output notebook |
-| **F1-Score** (weighted) | Tercantum dalam output notebook |
-| **ROC-AUC** (OvR weighted) | Tercantum dalam output notebook |
+| **Accuracy** | 0.9500 |
+| **Precision** | 0.9667 |
+| **Recall** | 0.9500 |
+| **F1-Score** | 0.9500 |
+| **ROC-AUC** | 0.9971 |
 
 Model disimpan sebagai file `logistic_regression_pipeline.pkl` menggunakan `joblib` untuk digunakan langsung oleh aplikasi Streamlit.
 
